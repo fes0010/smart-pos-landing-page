@@ -66,7 +66,7 @@ export default function Contact() {
               Send us a message
             </h3>
             <p className="text-gray-600">
-              Fill out the form and we'll get back to you within 24 hours
+              Fill out the form and we&apos;ll get back to you within 24 hours
             </p>
           </CardHeader>
           <CardContent>

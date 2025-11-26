@@ -191,7 +191,7 @@ export default function ContactForm() {
           <div>
             <p className="font-semibold text-success-900">Message sent successfully!</p>
             <p className="text-sm text-success-700 mt-1">
-              We'll get back to you within 24 hours.
+              We&apos;ll get back to you within 24 hours.
             </p>
           </div>
         </div>
