@@ -9,6 +9,7 @@ export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const navRef = useRef<HTMLElement>(null)
+  const mobileMenuRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +19,28 @@ export default function Navigation() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+
+  // Close mobile menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        isMobileMenuOpen &&
+        mobileMenuRef.current &&
+        navRef.current &&
+        !navRef.current.contains(event.target as Node)
+      ) {
+        setIsMobileMenuOpen(false)
+      }
+    }
+
+    if (isMobileMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside)
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [isMobileMenuOpen])
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
@@ -32,8 +55,11 @@ export default function Navigation() {
   }
 
   const navLinks = [
-    { label: 'Features', href: 'features' },
+    { label: 'Home', href: 'hero' },
+    { label: 'AI Features', href: 'features' },
     { label: 'Benefits', href: 'benefits' },
+    { label: 'POS Features', href: 'pos-features' },
+    { label: 'Why Choose Us', href: 'advantages' },
     { label: 'Pricing', href: 'pricing' },
     { label: 'Contact', href: 'contact' },
   ]
@@ -104,12 +130,15 @@ export default function Navigation() {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden py-4 bg-white rounded-lg shadow-lg mt-2">
+          <div ref={mobileMenuRef} className="md:hidden py-4 bg-white rounded-lg shadow-lg mt-2">
             <div className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <button
                   key={link.href}
-                  onClick={() => scrollToSection(link.href)}
+                  onClick={() => {
+                    scrollToSection(link.href)
+                    setIsMobileMenuOpen(false)
+                  }}
                   className="px-4 py-2 text-left text-gray-700 hover:text-primary-600 hover:bg-gray-50 transition-colors duration-300"
                 >
                   {link.label}
@@ -119,7 +148,10 @@ export default function Navigation() {
                 <Button
                   variant="primary"
                   size="md"
-                  onClick={() => scrollToSection('contact')}
+                  onClick={() => {
+                    scrollToSection('contact')
+                    setIsMobileMenuOpen(false)
+                  }}
                   className="w-full"
                 >
                   Get Started

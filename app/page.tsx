@@ -24,8 +24,12 @@ export default function Home() {
         <div id="benefits">
           <Benefits />
         </div>
-        <POSFeatures />
-        <Advantages />
+        <div id="pos-features">
+          <POSFeatures />
+        </div>
+        <div id="advantages">
+          <Advantages />
+        </div>
         <div id="pricing">
           <PricingPlans />
         </div>

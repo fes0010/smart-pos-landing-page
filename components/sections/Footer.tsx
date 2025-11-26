@@ -53,7 +53,7 @@ export default function Footer() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                   </svg>
                 </div>
-                <span className="text-xl font-bold text-white">AI POS</span>
+                <span className="text-xl font-bold text-white">Smart POS</span>
               </div>
               <p className="text-sm text-gray-400 mb-4">
                 Smart POS Solutions for Kenyan Businesses
@@ -194,7 +194,7 @@ export default function Footer() {
           <div className="pt-8 border-t border-gray-800">
             <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
               <p>
-                © {currentYear} AI POS. All rights reserved.
+                © {currentYear} Smart POS. All rights reserved.
               </p>
               <p>
                 Built for Kenyan businesses with ❤️
