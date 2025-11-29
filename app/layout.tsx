@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     follow: true,
   },
   verification: {
-    google: 'your-google-verification-code', // Replace with actual code
+    google: 'google237cfd5fe1fced1f',
   },
 }
 
