@@ -9,12 +9,12 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Smart POS | AI-Powered POS System for Kenyan Shops & Dukas',
-  description: 'Transform your retail or wholesale duka with AI automation. Get daily business reports, manage inventory, track profit with M-Pesa integration. Built for Kenyan businesses in Nairobi, Mombasa, Nakuru & beyond.',
-  keywords: 'POS system Kenya, POS system Nairobi, duka management software, wholesale shop software Kenya, retail management Kenya, M-Pesa POS integration, inventory management Kenya, AI business reports, shop management software, Smart POS, point of sale Kenya, business automation Kenya, AI consultation Kenya',
+  title: 'Smart POS Kenya | #1 AI-Powered POS System for Shops & Dukas',
+  description: 'Smart POS is Kenya\'s leading AI-powered point of sale system. Automated daily reports, real-time inventory, M-Pesa integration, dual retail/wholesale pricing. Free demo available. Trusted by 50+ shops in Nairobi, Mombasa, Nakuru, Kagio & beyond.',
+  keywords: 'Smart POS, Smart POS Kenya, POS system Kenya, POS system Nairobi, best POS Kenya, duka management software, wholesale shop software Kenya, retail management Kenya, M-Pesa POS integration, inventory management Kenya, AI business reports, shop management software, point of sale Kenya, business automation Kenya, AI consultation Kenya, POS Mombasa, POS Nakuru, shop software Kenya, retail software Kenya, wholesale POS Kenya',
   openGraph: {
-    title: 'Smart POS | AI-Powered POS System for Kenyan Shops',
-    description: 'Smart retail & wholesale management with AI automation. Daily reports, M-Pesa integration, inventory tracking.',
+    title: 'Smart POS Kenya | AI-Powered POS for Shops & Dukas',
+    description: 'Kenya\'s smartest POS system with AI automation. Daily reports, M-Pesa, inventory tracking. Try free demo!',
     locale: 'en_KE',
     type: 'website',
     url: 'https://munene.shop',
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Smart POS | AI-Powered POS System',
-    description: 'Smart retail management with AI automation for Kenyan businesses. Try free demo today!',
+    title: 'Smart POS Kenya | AI-Powered POS System',
+    description: 'Kenya\'s #1 AI-powered POS for retail & wholesale. Free demo available!',
   },
   alternates: {
     canonical: 'https://munene.shop',
@@ -32,6 +32,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  verification: {
+    google: 'your-google-verification-code', // Replace with actual code
+  },
 }
 
 export default function RootLayout({
@@ -39,7 +42,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const structuredData = {
+  // Software Application Schema
+  const softwareSchema = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
     name: 'Smart POS',
@@ -57,16 +61,70 @@ export default function RootLayout({
       ratingValue: '4.8',
       ratingCount: '150',
     },
-    provider: {
-      '@type': 'Organization',
-      name: 'Smart POS',
+  }
+
+  // Local Business Schema for Google Maps
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    '@id': 'https://munene.shop',
+    name: 'Smart POS Kenya',
+    description: 'AI-powered POS system and business automation solutions for Kenyan shops, dukas, and wholesale businesses.',
+    url: 'https://munene.shop',
+    telephone: '+254741047776',
+    email: 'festusmuruga@gmail.com',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'Nairobi',
+      addressLocality: 'Nairobi',
+      addressRegion: 'Nairobi County',
+      postalCode: '00100',
+      addressCountry: 'KE',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: -1.2921,
+      longitude: 36.8219,
+    },
+    areaServed: [
+      { '@type': 'City', name: 'Nairobi' },
+      { '@type': 'City', name: 'Mombasa' },
+      { '@type': 'City', name: 'Nakuru' },
+      { '@type': 'City', name: 'Kisumu' },
+      { '@type': 'City', name: 'Eldoret' },
+      { '@type': 'Country', name: 'Kenya' },
+    ],
+    priceRange: 'KES 1,700 - KES 5,000/month',
+    openingHoursSpecification: {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      opens: '08:00',
+      closes: '20:00',
+    },
+    sameAs: [
+      'https://wa.me/254741047776',
+    ],
+    image: 'https://munene.shop/og-image.png',
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      reviewCount: '50',
+    },
+  }
+
+  // Organization Schema
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Smart POS Kenya',
+    url: 'https://munene.shop',
+    logo: 'https://munene.shop/logo.png',
+    contactPoint: {
+      '@type': 'ContactPoint',
       telephone: '+254741047776',
-      email: 'festusmuruga@gmail.com',
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: 'Nairobi',
-        addressCountry: 'KE',
-      },
+      contactType: 'sales',
+      areaServed: 'KE',
+      availableLanguage: ['English', 'Swahili'],
     },
   }
 
@@ -75,7 +133,15 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
       <body className="font-sans antialiased">{children}</body>

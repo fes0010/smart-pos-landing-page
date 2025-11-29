@@ -178,11 +178,22 @@ export default function Hero() {
               ref={headlineRef}
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight"
             >
-              {heroContent.headline.split(' ').map((word, index) => (
-                <span key={index} className="word inline-block mr-2">
-                  {word}
-                </span>
-              ))}
+              {heroContent.headline.split(' ').map((word, index) => {
+                // Highlight "Smart" and "POS" with gradient
+                const isHighlighted = word === 'Smart' || word === 'POS'
+                return (
+                  <span
+                    key={index}
+                    className={`word inline-block mr-2 ${
+                      isHighlighted
+                        ? 'bg-gradient-to-r from-primary-600 to-primary-500 bg-clip-text text-transparent'
+                        : ''
+                    }`}
+                  >
+                    {word}
+                  </span>
+                )
+              })}
             </h1>
 
             <p

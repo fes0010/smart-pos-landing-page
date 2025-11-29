@@ -1,8 +1,8 @@
 import { AIFeature, Benefit, POSFeatureCategory } from '@/types'
 
 export const heroContent = {
-  headline: 'Run Your Shop Smarter with AI That Works While You Sleep',
-  subheadline: 'Get daily business reports automatically, ask questions in plain language, and manage your retail or wholesale shop with complete clarity and control—all in one modern system built for Kenyan businesses.',
+  headline: 'Smart POS — The AI-Powered Point of Sale That Runs Your Shop While You Sleep',
+  subheadline: 'Automated daily reports, real-time inventory, M-Pesa integration, and AI insights that help you make more profit. Built for Kenyan dukas, retail shops, and wholesale businesses.',
   primaryCTA: {
     text: 'Request a Free Demo',
     href: '#contact',
