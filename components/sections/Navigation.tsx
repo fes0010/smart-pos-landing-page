@@ -56,10 +56,10 @@ export default function Navigation() {
 
   const navLinks = [
     { label: 'Home', href: 'hero' },
-    { label: 'AI Features', href: 'features' },
-    { label: 'Benefits', href: 'benefits' },
-    { label: 'POS Features', href: 'pos-features' },
-    { label: 'Why Choose Us', href: 'advantages' },
+    { label: 'Services', href: 'services' },
+    { label: 'Demo', href: 'product-demo' },
+    { label: 'Features', href: 'features' },
+    { label: 'Testimonials', href: 'testimonials' },
     { label: 'Pricing', href: 'pricing' },
     { label: 'Contact', href: 'contact' },
   ]

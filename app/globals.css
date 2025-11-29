@@ -41,6 +41,17 @@
   }
 }
 
+/* Ensure animated elements are visible by default (GSAP will handle animations) */
+.testimonials-heading,
+.testimonial-card,
+.services-heading,
+.service-card,
+.showcase-heading,
+.faq-heading,
+.faq-item {
+  opacity: 1;
+}
+
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
   *,

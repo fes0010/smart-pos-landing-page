@@ -1,10 +1,14 @@
 import Navigation from '@/components/sections/Navigation'
 import Hero from '@/components/sections/Hero'
+import Services from '@/components/sections/Services'
+import ProductShowcase from '@/components/sections/ProductShowcase'
 import AIFeatures from '@/components/sections/AIFeatures'
 import Benefits from '@/components/sections/Benefits'
 import POSFeatures from '@/components/sections/POSFeatures'
+import Testimonials from '@/components/sections/Testimonials'
 import Advantages from '@/components/sections/Advantages'
 import PricingPlans from '@/components/sections/PricingPlans'
+import FAQ from '@/components/sections/FAQ'
 import FinalCTA from '@/components/sections/FinalCTA'
 import Contact from '@/components/sections/Contact'
 import Footer from '@/components/sections/Footer'
@@ -18,6 +22,12 @@ export default function Home() {
         <div id="hero">
           <Hero />
         </div>
+        <div id="services">
+          <Services />
+        </div>
+        <div id="product-demo">
+          <ProductShowcase />
+        </div>
         <div id="features">
           <AIFeatures />
         </div>
@@ -27,11 +37,17 @@ export default function Home() {
         <div id="pos-features">
           <POSFeatures />
         </div>
+        <div id="testimonials">
+          <Testimonials />
+        </div>
         <div id="advantages">
           <Advantages />
         </div>
         <div id="pricing">
           <PricingPlans />
+        </div>
+        <div id="faq">
+          <FAQ />
         </div>
         <FinalCTA />
         <div id="contact">

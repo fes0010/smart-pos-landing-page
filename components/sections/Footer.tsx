@@ -55,8 +55,11 @@ export default function Footer() {
                 </div>
                 <span className="text-xl font-bold text-white">Smart POS</span>
               </div>
-              <p className="text-sm text-gray-400 mb-4">
-                Smart POS Solutions for Kenyan Businesses
+              <p className="text-sm text-gray-400 mb-2">
+                AI-Powered POS & Business Automation
+              </p>
+              <p className="text-xs text-gray-500 mb-4">
+                Helping Kenyan businesses automate manual tasks and make smarter decisions with AI.
               </p>
               <div className="flex gap-3">
                 <a
@@ -112,13 +115,23 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Quick Links */}
+            {/* Services */}
             <div>
-              <h3 className="text-white font-semibold mb-4">Quick Links</h3>
+              <h3 className="text-white font-semibold mb-4">Services</h3>
               <ul className="space-y-2 text-sm">
                 <li>
-                  <a href="#features" className="hover:text-primary-400 transition-colors duration-200">
-                    Features
+                  <a href="https://demopos.munene.shop" target="_blank" rel="noopener noreferrer" className="hover:text-primary-400 transition-colors duration-200">
+                    Smart POS System
+                  </a>
+                </li>
+                <li>
+                  <a href="#services" className="hover:text-primary-400 transition-colors duration-200">
+                    AI Consulting
+                  </a>
+                </li>
+                <li>
+                  <a href="#services" className="hover:text-primary-400 transition-colors duration-200">
+                    Business Automation
                   </a>
                 </li>
                 <li>
@@ -127,18 +140,8 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="#contact" className="hover:text-primary-400 transition-colors duration-200">
-                    Contact
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-primary-400 transition-colors duration-200">
-                    Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-primary-400 transition-colors duration-200">
-                    Terms of Service
+                  <a href="#faq" className="hover:text-primary-400 transition-colors duration-200">
+                    FAQ
                   </a>
                 </li>
               </ul>
