@@ -19,6 +19,21 @@ export const metadata: Metadata = {
     type: 'website',
     url: 'https://munene.shop',
     siteName: 'Smart POS Kenya',
+    images: [
+      {
+        url: 'https://munene.shop/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Smart POS - AI-Powered Point of Sale System for Kenya',
+      },
+    ],
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/logo.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/apple-touch-icon.png',
   },
   twitter: {
     card: 'summary_large_image',
@@ -104,7 +119,8 @@ export default function RootLayout({
     sameAs: [
       'https://wa.me/254741047776',
     ],
-    image: 'https://munene.shop/og-image.png',
+    image: 'https://munene.shop/logo.svg',
+    logo: 'https://munene.shop/logo.svg',
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '4.8',
@@ -118,7 +134,7 @@ export default function RootLayout({
     '@type': 'Organization',
     name: 'Smart POS Kenya',
     url: 'https://munene.shop',
-    logo: 'https://munene.shop/logo.png',
+    logo: 'https://munene.shop/logo.svg',
     contactPoint: {
       '@type': 'ContactPoint',
       telephone: '+254741047776',

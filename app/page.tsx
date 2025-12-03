@@ -5,7 +5,6 @@ import ProductShowcase from '@/components/sections/ProductShowcase'
 import AIFeatures from '@/components/sections/AIFeatures'
 import Benefits from '@/components/sections/Benefits'
 import POSFeatures from '@/components/sections/POSFeatures'
-import Testimonials from '@/components/sections/Testimonials'
 import Advantages from '@/components/sections/Advantages'
 import PricingPlans from '@/components/sections/PricingPlans'
 import FAQ from '@/components/sections/FAQ'
@@ -36,9 +35,6 @@ export default function Home() {
         </div>
         <div id="pos-features">
           <POSFeatures />
-        </div>
-        <div id="testimonials">
-          <Testimonials />
         </div>
         <div id="advantages">
           <Advantages />
