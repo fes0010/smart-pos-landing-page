@@ -155,14 +155,18 @@ export default function Hero() {
       ref={heroRef}
       className="relative min-h-screen flex items-center overflow-hidden pt-20"
     >
-      {/* Background Video */}
+      {/* Background - Video on desktop, gradient on mobile */}
       <div className="absolute inset-0 z-0">
+        {/* Mobile: Static gradient background (better performance & battery) */}
+        <div className="md:hidden absolute inset-0 bg-gradient-to-br from-gray-900 via-primary-900 to-gray-900" />
+        
+        {/* Desktop: Video background */}
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          className="hidden md:block absolute inset-0 w-full h-full object-cover"
         >
           <source src="/demo-video.mp4" type="video/mp4" />
         </video>
