@@ -17,6 +17,7 @@ export interface AIFeature {
 export interface Benefit {
   id: string
   title: string
+  problem: string
   description: string
   icon: string
   outcomes: string[]

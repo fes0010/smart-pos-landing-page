@@ -126,6 +126,9 @@ export default function Benefits() {
               <div className={`benefit-icon w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${colorMap[benefit.id]} p-4 text-white shadow-lg`}>
                 {iconMap[benefit.icon]}
               </div>
+              <p className="text-primary-600 font-semibold text-sm mb-2">
+                {benefit.problem}
+              </p>
               <h3 className="text-xl font-bold text-gray-900 mb-2">
                 {benefit.title}
               </h3>

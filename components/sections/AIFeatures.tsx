@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useEffect, useRef } from 'react'
+import Image from 'next/image'
 import Section from '@/components/ui/Section'
 import { Card, CardHeader, CardContent } from '@/components/ui/Card'
 import { aiFeatures } from '@/data/content'
@@ -101,6 +102,19 @@ export default function AIFeatures() {
         <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
           Automated reports, conversational insights, and complete transparency—all powered by AI
         </p>
+      </div>
+
+      {/* Product Flyer Showcase */}
+      <div className="mb-12 max-w-2xl mx-auto">
+        <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+          <Image
+            src="/images/flyer.png"
+            alt="Smart POS - AI-powered point of sale system for Kenyan businesses"
+            width={800}
+            height={1000}
+            className="w-full h-auto"
+          />
+        </div>
       </div>
 
       <div className="ai-features-grid grid md:grid-cols-2 lg:grid-cols-3 gap-8">

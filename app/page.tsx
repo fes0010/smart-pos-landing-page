@@ -1,5 +1,6 @@
 import Navigation from '@/components/sections/Navigation'
 import Hero from '@/components/sections/Hero'
+import TrustStack from '@/components/sections/TrustStack'
 import Services from '@/components/sections/Services'
 import ProductShowcase from '@/components/sections/ProductShowcase'
 import AIFeatures from '@/components/sections/AIFeatures'
@@ -21,6 +22,7 @@ export default function Home() {
         <div id="hero">
           <Hero />
         </div>
+        <TrustStack />
         <div id="services">
           <Services />
         </div>

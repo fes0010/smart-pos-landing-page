@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useEffect, useRef, useState } from 'react'
+import Image from 'next/image'
 import Section from '@/components/ui/Section'
 import Button from '@/components/ui/Button'
 import { gsap } from '@/lib/gsap-config'
@@ -91,10 +92,29 @@ export default function ProductShowcase() {
           See Smart POS in Action
         </h2>
         <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-6">
-          A modern, intuitive interface designed for speed and simplicity
+          Watch how easy it is to manage your business with Smart POS
         </p>
-        <p className="text-gray-400 max-w-2xl mx-auto mb-8">
-          Try the full experience — add products, make sales, and explore all features with our demo account
+      </div>
+
+      {/* Demo Video */}
+      <div className="max-w-4xl mx-auto mb-12">
+        <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-700">
+          <video
+            className="w-full aspect-video"
+            controls
+            poster="/demo-video-poster.jpg"
+            preload="metadata"
+          >
+            <source src="/demo-video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      {/* CTA Section */}
+      <div className="text-center mb-12">
+        <p className="text-gray-400 max-w-2xl mx-auto mb-6">
+          Ready to try it yourself? Use our demo account to explore all features
         </p>
         
         {/* Demo Credentials */}
@@ -166,22 +186,24 @@ export default function ProductShowcase() {
 
         {/* Feature Display */}
         <div className="bg-gray-800/50 rounded-2xl p-8 md:p-12 border border-gray-700">
-          <div className="flex flex-col md:flex-row gap-8 items-start">
-            {/* Icon */}
-            <div className="w-16 h-16 bg-primary-600 rounded-2xl flex items-center justify-center flex-shrink-0">
-              {features[activeTab].icon}
-            </div>
-
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
             {/* Content */}
-            <div className="flex-1 space-y-6">
-              <h3 className="text-2xl md:text-3xl font-bold">
-                {features[activeTab].title}
-              </h3>
-              <p className="text-gray-300 text-lg">
-                {features[activeTab].description}
-              </p>
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <div className="w-16 h-16 bg-primary-600 rounded-2xl flex items-center justify-center flex-shrink-0">
+                  {features[activeTab].icon}
+                </div>
+                <div>
+                  <h3 className="text-2xl md:text-3xl font-bold">
+                    {features[activeTab].title}
+                  </h3>
+                  <p className="text-gray-300 text-lg mt-2">
+                    {features[activeTab].description}
+                  </p>
+                </div>
+              </div>
 
-              <ul className="grid sm:grid-cols-3 gap-4">
+              <ul className="space-y-3">
                 {features[activeTab].highlights.map((highlight, index) => (
                   <li key={index} className="flex items-center gap-3">
                     <div className="w-6 h-6 bg-primary-600/20 rounded-full flex items-center justify-center flex-shrink-0">
@@ -213,6 +235,17 @@ export default function ProductShowcase() {
                   Explore This Feature →
                 </Button>
               </div>
+            </div>
+
+            {/* Product Screenshot */}
+            <div className="relative rounded-xl overflow-hidden shadow-2xl border border-gray-600">
+              <Image
+                src="/images/pospage.png"
+                alt={`Smart POS ${features[activeTab].title} interface`}
+                width={800}
+                height={600}
+                className="w-full h-auto"
+              />
             </div>
           </div>
         </div>

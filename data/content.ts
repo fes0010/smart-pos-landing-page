@@ -1,16 +1,16 @@
 import { AIFeature, Benefit, POSFeatureCategory } from '@/types'
 
 export const heroContent = {
-  headline: 'Smart POS — The AI-Powered Point of Sale That Handles the Numbers While You Grow Your Business',
-  subheadline: 'Automated daily reports, real-time inventory, M-Pesa integration, and AI insights that help you make more profit. Built for Kenyan dukas, retail shops, and wholesale businesses.',
+  headline: 'The AI-Powered Point of Sale That Handles the Numbers While You Grow Your Business',
+  subheadline: 'Automated daily reports, real-time M-Pesa sales, and smart inventory insights. Built for Kenyan dukas, big and small, to finally make more money effortlessly.',
   primaryCTA: {
-    text: 'Request a Free Demo',
-    href: '#contact',
+    text: 'Try Live Demo',
+    href: 'https://demopos.munene.shop',
     variant: 'primary' as const,
   },
   secondaryCTA: {
-    text: 'See How It Works',
-    href: '#features',
+    text: 'Chat on WhatsApp',
+    href: 'https://wa.me/254741047776?text=Hi%2C%20I%27d%20like%20to%20request%20a%20free%20demo%20of%20Smart%20POS',
     variant: 'outline' as const,
   },
 }
@@ -66,7 +66,8 @@ export const benefits: Benefit[] = [
   {
     id: 'freedom',
     title: 'Freedom from Manual Work',
-    description: 'No more spreadsheets, CSV exports, or end-of-day calculations',
+    problem: 'Stuck in Spreadsheet Hell?',
+    description: 'Drowning in manual reports and end-of-day calculations eating your valuable time? Smart POS frees you completely.',
     icon: 'Sparkles',
     outcomes: [
       'AI closes your day with a complete report—automatically',
@@ -77,7 +78,8 @@ export const benefits: Benefit[] = [
   {
     id: 'convenience',
     title: 'Ultimate Convenience',
-    description: 'Get answers instantly, anytime you need them',
+    problem: 'Tired of Digging Through Reports?',
+    description: 'Need quick answers but hate navigating complex software? Just ask in plain language and get instant clarity.',
     icon: 'Lightning',
     outcomes: [
       'Ask questions in plain language, get clear answers',
@@ -88,7 +90,8 @@ export const benefits: Benefit[] = [
   {
     id: 'clarity',
     title: 'Clarity & Control',
-    description: 'Understand your business with simple, clear insights',
+    problem: 'Confused by Your Own Numbers?',
+    description: 'Business data shouldn\'t feel like a mystery. Get insights explained simply so you always know where you stand.',
     icon: 'Eye',
     outcomes: [
       'Numbers explained in simple language, not technical jargon',
@@ -99,7 +102,8 @@ export const benefits: Benefit[] = [
   {
     id: 'safety',
     title: 'Safety & Trust',
-    description: 'Complete accountability with no silent changes',
+    problem: 'Worried About Hidden Changes?',
+    description: 'Staff making changes you don\'t know about? Every action is logged and important changes need your approval first.',
     icon: 'Lock',
     outcomes: [
       'All important changes require your confirmation',
